@@ -1,0 +1,53 @@
+# Ignore Python cache files
+*.pyc
+*.pyo
+__pycache__/
+
+# Ignore virtual environments
+venv/
+.env
+
+# Ignore database files
+backend/app/*.db
+
+# Ignore Alembic migration logs
+backend/alembic/versions/
+
+# Ignore private keys
+backend/keys/private_key.pem
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Ignore node_modules (if used for the extension)
+node_modules/
+
+# Ignore Chrome extension build artifacts
+extension/dist/
+extension/*.zip
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore VS Code settings (optional, if not shared across the team)
+.vscode/
+
+# Ignore IDE-specific files
+.idea/
+*.iml
+
+# Ignore temporary files created during testing or development
+*.bak
+*.old
+*.orig
+coverage/
+htmlcov/
+
+# Ignore lock files for package managers (optional, if you only need requirements.txt or package.json)
+Pipfile.lock
+poetry.lock
+package-lock.json
+yarn.lock

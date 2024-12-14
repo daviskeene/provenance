@@ -1,0 +1,26 @@
+{
+  "name": "Provenance MVP",
+  "version": "0.21",
+  "manifest_version": 3,
+  "description": "Record and authenticate writing sessions.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["http://localhost:8000/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*/*", "http://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
